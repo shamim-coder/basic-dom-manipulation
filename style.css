@@ -1,4 +1,24 @@
+header {
+    padding: 30px;
+    box-sizing: border-box;
+}
 .form input {
     margin-bottom: 15px;
     padding: 10px;
+}
+.add-blog input {
+    margin-bottom: 10px;
+}
+#blogs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+section {
+    border: 2px solid #333;
+    padding: 30px;
+    margin: 30px;
+}
+#form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }

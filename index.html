@@ -11,66 +11,88 @@
     <header>
         <h1>Welcome to DOM - BG Color Change to <span id="bg-color-text">Normal</span></h1>
     </header>
-    <button id="redBtn" type="submit">Make Red</button>
-    <button onclick="blueBtn()" id="blueBtn" type="submit">Make Blue</button>
-    <button id="greenBtn" type="submit">Make Green</button>
-    <button id="yellowBtn" type="submit">Make Yellow</button>
-    <button id="indigoBtn" type="submit">Make Indigo</button>
-    <button id="hotpinkBtn" type="submit">Make Hot Pink</button>
+    
     <main id="main">
-        <section>
-            <h2>Blog Title 1</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam nisi deleniti, provident debitis quibusdam consequatur?</p>
-            <button type="submit">Click Here</button>
+        <section id="btnCollection">
+            <button id="redBtn" type="submit">Make Red</button>
+            <button onclick="blueBtn()" id="blueBtn" type="submit">Make Blue</button>
+            <button id="greenBtn" type="submit">Make Green</button>
+            <button id="yellowBtn" type="submit">Make Yellow</button>
+            <button id="indigoBtn" type="submit">Make Indigo</button>
+            <button id="hotpinkBtn" type="submit">Make Hot Pink</button>
         </section>
-        <section>
-            <h2>Blog Title 2</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam nisi deleniti, provident debitis quibusdam consequatur?</p>
-            <button type="submit">Click Here</button>
-        </section>
-        <section>
-            <h2>Blog Title 3</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam nisi deleniti, provident debitis quibusdam consequatur?</p>
-            <button type="submit">Click Here</button>
-        </section>
-        <section>
-            <h2>Blog Title 4</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam nisi deleniti, provident debitis quibusdam consequatur?</p>
-            <button type="submit">Click Here</button>
-        </section>
-
-
-        <section>
-            <div class="form">
-                <input required id="firstName" placeholder="First Name" name="firstName" type="text"> <br>
-                <input required id="lastName" placeholder="Last Name" name="lastName" type="text"> <br>
-                <input required id="companyName" placeholder="Company Name" name="company" type="text"> <br>
-                <input required id="mobileNumber" placeholder="Mobile Number" name="mobile" type="tel"> <br>
-
-                <button id="saveBtn" type="submit">Save</button>
-            </div>
+        <section id="form">
+            <section>
+                <div class="form">
+                    <input required id="firstName" placeholder="First Name" name="firstName" type="text"> <br>
+                    <input required id="lastName" placeholder="Last Name" name="lastName" type="text"> <br>
+                    <input required id="companyName" placeholder="Company Name" name="company" type="text"> <br>
+                    <input required id="mobileNumber" placeholder="Mobile Number" name="mobile" type="tel"> <br>
+    
+                    <button id="saveBtn" type="submit">Save</button>
+                </div>
+            </section>
+    
+    
+            <section>
+                <div class="form">
+                    <p>First Name: <span id="firstNamePrint"></span></p>
+                    <p>Last Name: <span id="lastNamePrint"></span></p>
+                    <p>Full Name: <span id="fullNamePrint"></span></p>
+                    <p>Company Name: <span id="companyNamePrint"></span></p>
+                    <p>Mobile Number: <span id="mobileNumPrint"></span></p>
+    
+                    <button id="editBtn" type="submit">Edit</button>
+                </div>
+            </section>
         </section>
 
 
-        <section>
-            <div class="form">
-                <p>First Name: <span id="firstNamePrint"></span></p>
-                <p>Last Name: <span id="lastNamePrint"></span></p>
-                <p>Full Name: <span id="fullNamePrint"></span></p>
-                <p>Company Name: <span id="companyNamePrint"></span></p>
-                <p>Mobile Number: <span id="mobileNumPrint"></span></p>
 
-                <button id="editBtn" type="submit">Edit</button>
+        <div id="blogs">
+            <section>
+                <h2>Blog Title 1</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam nisi deleniti, provident debitis quibusdam consequatur?</p>
+                <button type="submit">Click Here</button>
+            </section>
+            <section>
+                <h2>Blog Title 2</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam nisi deleniti, provident debitis quibusdam consequatur?</p>
+                <button type="submit">Click Here</button>
+            </section>
+            <section>
+                <h2>Blog Title 3</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam nisi deleniti, provident debitis quibusdam consequatur?</p>
+                <button type="submit">Click Here</button>
+            </section>
+            <section>
+                <h2>Blog Title 4</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam nisi deleniti, provident debitis quibusdam consequatur?</p>
+                <button type="submit">Click Here</button>
+            </section>
+        </div>
+
+        <section>
+            <div class="add-blog">
+                <h3>Add Blog Section</h3>
+                <label for="title">
+                    <p>Blog Title</p>
+                    <input type="text" name="title" id="blog-title">
+                </label> <br>
+                <label for="blog-contetn">
+                    <p>Blog Content</p>
+                    <textarea name="content" id="blog-content" cols="50" rows="5"></textarea>
+                </label> <br>
+                <button id="addBlogBtn">Add Blog</button>
             </div>
         </section>
     </main>
 
 
-
     <script src="js/script.js"></script>
 
     <script>
-    
+        
     </script>
 
 
