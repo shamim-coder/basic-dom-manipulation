@@ -9,6 +9,10 @@ header {
 .add-blog input {
     margin-bottom: 10px;
 }
+#bg-color-text {
+    border: 2px solid black;
+    padding: 5px 10px;
+}
 #blogs {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -21,4 +25,5 @@ section {
 #form {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    color: light;
 }

@@ -1,49 +1,40 @@
-document.getElementById("redBtn").onclick = bgRed;
-// document.getElementById('blueBtn').onclick=blueBtn;
-document.getElementById("greenBtn").onclick = greenBtn;
-
 // bg color change text
 const bgColorText = document.getElementById("bg-color-text");
 
 const main = document.getElementById("main");
 main.style.overflow = "hidden";
 
-function bgRed() {
-    main.style.backgroundColor = "red";
-    bgColorText.style.color = "red";
-    bgColorText.style.border = "2px solid black";
-    bgColorText.style.padding = "5px 10px";
-    bgColorText.innerText = "Red";
-}
+// using HTML onclick() method
 function blueBtn() {
     main.style.backgroundColor = "blue";
     bgColorText.style.color = "blue";
     bgColorText.innerText = "Blue";
-    bgColorText.style.border = "2px solid black";
-    bgColorText.style.padding = "5px 10px";
+}
+// Handle event using separate function
+document.getElementById("redBtn").onclick = bgRed;
+document.getElementById("greenBtn").onclick = greenBtn;
+
+function bgRed() {
+    main.style.backgroundColor = "red";
+    bgColorText.style.color = "red";
+    bgColorText.innerText = "Red";
 }
 function greenBtn() {
     main.style.backgroundColor = "green";
     bgColorText.style.color = "green";
     bgColorText.innerText = "Green";
-    bgColorText.style.border = "2px solid black";
-    bgColorText.style.padding = "5px 10px";
 }
 
 // handle event using anonymous function
-
 const yellowBtn = document.getElementById("yellowBtn");
 
 yellowBtn.onclick = () => {
     main.style.backgroundColor = "yellow";
     bgColorText.style.color = "yellow";
     bgColorText.innerText = "Yellow";
-    bgColorText.style.border = "2px solid black";
-    bgColorText.style.padding = "5px 10px";
 };
 
 // handle event using addEventListener() method
-
 const indigoBtn = document.getElementById("indigoBtn");
 indigoBtn.addEventListener("click", changeBgToIndigo);
 
@@ -51,23 +42,25 @@ function changeBgToIndigo() {
     main.style.backgroundColor = "indigo";
     bgColorText.style.color = "indigo";
     bgColorText.innerText = "Indigo";
-    bgColorText.style.border = "2px solid black";
-    bgColorText.style.padding = "5px 10px";
 }
 
 // handle event using addEventListener() method & Anonymous Function
-
 const hotpinkBtn = document.getElementById("hotpinkBtn");
 hotpinkBtn.addEventListener("click", () => {
     main.style.backgroundColor = "hotpink";
     bgColorText.style.color = "hotpink";
     bgColorText.innerText = "Hot Pink";
-    bgColorText.style.border = "2px solid black";
-    bgColorText.style.padding = "5px 10px";
+});
+
+// handle event using addEventListener() method & Anonymous Function
+const normalBtn = document.getElementById("normalBtn");
+normalBtn.addEventListener("click", () => {
+    main.style.backgroundColor = "white";
+    bgColorText.style.color = "black";
+    bgColorText.innerText = "Normal";
 });
 
 // Dynamic Form Save and Edit
-
 const firstName = document.getElementById("firstName");
 const lastName = document.getElementById("lastName");
 const companyName = document.getElementById("companyName");
@@ -106,8 +99,33 @@ document.getElementById("addBlogBtn").addEventListener("click", () => {
     const section = document.createElement("section");
     const h2 = document.createElement("h2");
     const p = document.createElement("p");
+    const inputBox = document.createElement("input");
+    inputBox.setAttribute("placeholder", 'Type "Delete" to confirm');
+    inputBox.setAttribute("id", "deleteConfirm");
+    inputBox.setAttribute("type", "text");
+    const deleteBtn = document.createElement("input");
+    deleteBtn.setAttribute("id", "blogDeleteBtn");
+    deleteBtn.setAttribute("type", "button");
+    deleteBtn.setAttribute("value", "Delete");
+    deleteBtn.setAttribute("disabled", "disabled");
     h2.innerText = blogTitle;
     p.innerText = blogContent;
-    section.append(h2, p);
+    section.append(h2, p, inputBox, deleteBtn);
     blogs.appendChild(section);
+});
+
+// Delete Blog with Confirm Keyword like github
+document.getElementById("blogDeleteBtn").addEventListener("click", () => {
+    document.querySelector("#blogs section").style.display = "none";
+    console.log("click");
+});
+
+document.getElementById("deleteConfirm").addEventListener("keyup", (event) => {
+    const addBlogBtn = document.getElementById("blogDeleteBtn");
+    console.log(event.target.value);
+    if (event.target.value == "Delete") {
+        addBlogBtn.removeAttribute("disabled");
+    } else {
+        addBlogBtn.setAttribute("disabled", true);
+    }
 });

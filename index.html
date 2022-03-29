@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document Object Model</title>
+    <title>DOM - Document Object Model</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,6 +20,7 @@
             <button id="yellowBtn" type="submit">Make Yellow</button>
             <button id="indigoBtn" type="submit">Make Indigo</button>
             <button id="hotpinkBtn" type="submit">Make Hot Pink</button>
+            <button id="normalBtn" type="submit">Make Normal</button>
         </section>
         <section id="form">
             <section>
@@ -33,42 +34,25 @@
                 </div>
             </section>
     
-    
             <section>
                 <div class="form">
-                    <p>First Name: <span id="firstNamePrint"></span></p>
-                    <p>Last Name: <span id="lastNamePrint"></span></p>
-                    <p>Full Name: <span id="fullNamePrint"></span></p>
-                    <p>Company Name: <span id="companyNamePrint"></span></p>
-                    <p>Mobile Number: <span id="mobileNumPrint"></span></p>
+                    <p>First Name: <strong id="firstNamePrint"></strong></p>
+                    <p>Last Name: <strong id="lastNamePrint"></strong></p>
+                    <p>Full Name: <strong id="fullNamePrint"></strong></p>
+                    <p>Company Name: <strong id="companyNamePrint"></strong></p>
+                    <p>Mobile Number: <strong id="mobileNumPrint"></strong></p>
     
                     <button id="editBtn" type="submit">Edit</button>
                 </div>
             </section>
         </section>
 
-
-
         <div id="blogs">
             <section>
                 <h2>Blog Title 1</h2>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam nisi deleniti, provident debitis quibusdam consequatur?</p>
-                <button type="submit">Click Here</button>
-            </section>
-            <section>
-                <h2>Blog Title 2</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam nisi deleniti, provident debitis quibusdam consequatur?</p>
-                <button type="submit">Click Here</button>
-            </section>
-            <section>
-                <h2>Blog Title 3</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam nisi deleniti, provident debitis quibusdam consequatur?</p>
-                <button type="submit">Click Here</button>
-            </section>
-            <section>
-                <h2>Blog Title 4</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam nisi deleniti, provident debitis quibusdam consequatur?</p>
-                <button type="submit">Click Here</button>
+                <input id="deleteConfirm" placeholder='Type "Delete" to confirm' type="text">
+                <input id="blogDeleteBtn" disabled="disabled" type="button" value="Delete">
             </section>
         </div>
 
@@ -77,23 +61,23 @@
                 <h3>Add Blog Section</h3>
                 <label for="title">
                     <p>Blog Title</p>
-                    <input type="text" name="title" id="blog-title">
+                    <input type="text" placeholder="Type your blog title" name="title" id="blog-title">
                 </label> <br>
                 <label for="blog-contetn">
                     <p>Blog Content</p>
-                    <textarea name="content" id="blog-content" cols="50" rows="5"></textarea>
+                    <textarea name="content" placeholder="Type your blog article" id="blog-content" cols="50" rows="5"></textarea>
                 </label> <br>
                 <button id="addBlogBtn">Add Blog</button>
             </div>
         </section>
     </main>
 
-
-    <script src="js/script.js"></script>
-
     <script>
         
     </script>
+
+
+    <script src="js/script.js"></script>
 
 
 </body>
