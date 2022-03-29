@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to DOM - BG Color Change to <span id="bg-color-text">Normal</span></h1>
+    </header>
+    <button id="redBtn" type="submit">Make Red</button>
+    <button onclick="blueBtn()" id="blueBtn" type="submit">Make Blue</button>
+    <button id="greenBtn" type="submit">Make Green</button>
+    <button id="yellowBtn" type="submit">Make Yellow</button>
+    <button id="indigoBtn" type="submit">Make Indigo</button>
+    <button id="hotpinkBtn" type="submit">Make Hot Pink</button>
+    <main id="main">
+        <section>
+            <h2>Blog Title 1</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam nisi deleniti, provident debitis quibusdam consequatur?</p>
+            <button type="submit">Click Here</button>
+        </section>
+        <section>
+            <h2>Blog Title 2</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam nisi deleniti, provident debitis quibusdam consequatur?</p>
+            <button type="submit">Click Here</button>
+        </section>
+        <section>
+            <h2>Blog Title 3</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam nisi deleniti, provident debitis quibusdam consequatur?</p>
+            <button type="submit">Click Here</button>
+        </section>
+        <section>
+            <h2>Blog Title 4</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam nisi deleniti, provident debitis quibusdam consequatur?</p>
+            <button type="submit">Click Here</button>
+        </section>
+
+
+        <section>
+            <div class="form">
+                <input required id="firstName" placeholder="First Name" name="firstName" type="text"> <br>
+                <input required id="lastName" placeholder="Last Name" name="lastName" type="text"> <br>
+                <input required id="companyName" placeholder="Company Name" name="company" type="text"> <br>
+                <input required id="mobileNumber" placeholder="Mobile Number" name="mobile" type="tel"> <br>
+
+                <button id="saveBtn" type="submit">Save</button>
+            </div>
+        </section>
+
+
+        <section>
+            <div class="form">
+                <p>First Name: <span id="firstNamePrint"></span></p>
+                <p>Last Name: <span id="lastNamePrint"></span></p>
+                <p>Full Name: <span id="fullNamePrint"></span></p>
+                <p>Company Name: <span id="companyNamePrint"></span></p>
+                <p>Mobile Number: <span id="mobileNumPrint"></span></p>
+
+                <button id="editBtn" type="submit">Edit</button>
+            </div>
+        </section>
+    </main>
+
+
+
+    <script src="js/script.js"></script>
+
+    <script>
+    
+    </script>
+
+
+</body>
+</html>
