@@ -93,9 +93,9 @@ document.getElementById("editBtn").addEventListener("click", () => {
 
 // Add Blog
 const blogs = document.querySelector("#blogs");
+const blogTitle = document.getElementById("blog-title");
+const blogContent = document.getElementById("blog-content");
 document.getElementById("addBlogBtn").addEventListener("click", () => {
-    const blogTitle = document.getElementById("blog-title").value;
-    const blogContent = document.getElementById("blog-content").value;
     const section = document.createElement("section");
     const h2 = document.createElement("h2");
     const p = document.createElement("p");
@@ -108,24 +108,35 @@ document.getElementById("addBlogBtn").addEventListener("click", () => {
     deleteBtn.setAttribute("type", "button");
     deleteBtn.setAttribute("value", "Delete");
     deleteBtn.setAttribute("disabled", "disabled");
-    h2.innerText = blogTitle;
-    p.innerText = blogContent;
+    h2.innerText = blogTitle.value;
+    p.innerText = blogContent.value;
     section.append(h2, p, inputBox, deleteBtn);
     blogs.appendChild(section);
+    blogTitle.value = "";
+    blogContent.value = "";
+    inputBox.addEventListener("keyup", (e) => {
+        if (e.target.value == "Delete") {
+            deleteBtn.removeAttribute("disabled");
+        } else {
+            deleteBtn.setAttribute("disabled", true);
+        }
+        deleteBtn.addEventListener("click", () => {
+            section.style.display = "none";
+        });
+    });
 });
+// // Delete Blog with Confirm Keyword like github
+// document.getElementById("blogDeleteBtn").addEventListener("click", () => {
+//     document.querySelector("#blogs section").style.display = "none";
+//     console.log("click");
+// });
 
-// Delete Blog with Confirm Keyword like github
-document.getElementById("blogDeleteBtn").addEventListener("click", () => {
-    document.querySelector("#blogs section").style.display = "none";
-    console.log("click");
-});
-
-document.getElementById("deleteConfirm").addEventListener("keyup", (event) => {
-    const addBlogBtn = document.getElementById("blogDeleteBtn");
-    console.log(event.target.value);
-    if (event.target.value == "Delete") {
-        addBlogBtn.removeAttribute("disabled");
-    } else {
-        addBlogBtn.setAttribute("disabled", true);
-    }
-});
+// document.getElementById("deleteConfirm").addEventListener("keyup", (event) => {
+//     const addBlogBtn = document.getElementById("blogDeleteBtn");
+//     console.log(event.target.value);
+//     if (event.target.value == "Delete") {
+//         addBlogBtn.removeAttribute("disabled");
+//     } else {
+//         addBlogBtn.setAttribute("disabled", true);
+//     }
+// });
